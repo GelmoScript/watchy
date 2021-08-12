@@ -27,7 +27,7 @@ namespace Watchy.WorkerService
 				await _rateService.CheckResources();
 				_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 				_loggerService.Log($"ExchangeChecked at {DateTimeOffset.Now}");
-				await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+				await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
 			}
 			_loggerService.Log($"Service stopped at {DateTimeOffset.Now}");
 

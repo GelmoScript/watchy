@@ -68,8 +68,8 @@ namespace Watchy.WorkerService.Services
 
 			if (sendEmail)
 			{
-				//string subject = "Alerta de uso de dispositivo";
-				//await _emailService.SendEmailToAllUsers(subject, message);
+				string subject = "Alerta de uso de dispositivo";
+				await _emailService.SendEmailToAllUsers(subject, message);
 			}
 		}
 
